@@ -10,7 +10,7 @@ public class HelloWorld {
     public void looplHello(int amount)
     {
         int i=0;
-        if(i<amount)
+        while(i<amount)
         {
             i=i+1;
             print();
