@@ -52,7 +52,6 @@ public class FileServer {
 
             File fileToSend = new File(filePath + File.separator + fileName);
 
-
             if (fileToSend.exists()) {
                 System.out.println("Sending file: " + fileName);
 
