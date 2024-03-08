@@ -20,6 +20,7 @@ public class UDPServer {
         }
     }
 
+    // Handle the request
     private static void handlePacket(DatagramPacket packet, DatagramSocket socket) {
         try {
             String receivedText = new String(packet.getData(), 0, packet.getLength());
