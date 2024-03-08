@@ -8,6 +8,8 @@ import java.net.*;
  * The FileClientUDP class implements a simple file client than listens on the specified port for incoming packets.
  * Through this same port, it sends packets to a specified port and address.
  * There is no connection establish during this process.
+
+ * Be sure to make a ClientFiles folder in the src folder before running the code.
  */
 public class FileClientUDP {
     public static void main(String[] args) {

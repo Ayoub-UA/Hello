@@ -9,6 +9,8 @@ import java.net.Socket;
 
  * This extra class was implemented to showcase the working functionality of multithreading.
  * You can see this by first runnning FileServerTCP and then running concurrentRun.
+
+ * Be sure to make a saveFolder folder in the src folder before running the code.
  */
 public class FileClient2TCP {
     public static void main(String[] args) {

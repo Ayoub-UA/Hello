@@ -6,6 +6,8 @@ import java.net.*;
 /**
  * The FileClientTCP class implements a simple client that connects to a file server, sends a request for a specific file,
  * and receives the requested file from the server. The client operates on a specified server address (localhost) and port.
+
+ * Be sure to make a saveFolder folder in the src folder before running the code.
  */
 public class FileClientTCP {
     public static void main(String[] args) {
