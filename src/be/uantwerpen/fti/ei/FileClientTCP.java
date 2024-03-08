@@ -4,10 +4,10 @@ import java.io.*;
 import java.net.*;
 
 /**
- * The FileClient class implements a simple client that connects to a file server, sends a request for a specific file,
+ * The FileClientTCP class implements a simple client that connects to a file server, sends a request for a specific file,
  * and receives the requested file from the server. The client operates on a specified server address (localhost) and port.
  */
-public class FileClient {
+public class FileClientTCP {
     public static void main(String[] args) {
         // Define the serverAddress as localHost and the same port
         String serverAddress = "127.0.0.1";
@@ -28,7 +28,7 @@ public class FileClient {
             outputStream.writeObject(fileName);
 
             // Receive the file from the server
-            File receivedFile = new File("./saveFolder" + File.separator + fileName);
+            File receivedFile = new File("./src/saveFolder" + File.separator + fileName);
 
             // This code is similar to the code on the server side but in reverse
             try (FileOutputStream fileOutputStream = new FileOutputStream(receivedFile)) {
@@ -38,7 +38,8 @@ public class FileClient {
                     fileOutputStream.write(buffer, 0, bytesRead);
                 }
             }
-            System.out.println("File received successfully");
+            System.out.println("File 1 received successfully");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

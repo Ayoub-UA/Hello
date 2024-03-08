@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.*;
 
 /**
- * The FileServer class implements a simple file server that listens for incoming client connections
+ * The FileServerTCP class implements a simple file server that listens for incoming client connections
  * and handles each connection in a separate thread. It allows clients to request files, and it sends
  * the requested files to the clients.
  *
@@ -12,11 +12,11 @@ import java.net.*;
  * When a client connects, a new thread is created to handle the client's request.
  */
 
-public class FileServer {
+public class FileServerTCP {
     public static void main(String[] args) {
         // Define a path and a folder
         int port = 5000;
-        String filePath = "./serverFolder";
+        String filePath = "./src/serverFolder";
 
         /*
         * This is a try-with-resources statement that declares the serverSocket
@@ -41,6 +41,7 @@ public class FileServer {
     }
 
     private static void handleClient(Socket clientSocket, String filePath) {
+
         try (
                 // OutputStream to send the file and its contents
                 ObjectOutputStream outputStream = new ObjectOutputStream(clientSocket.getOutputStream());
