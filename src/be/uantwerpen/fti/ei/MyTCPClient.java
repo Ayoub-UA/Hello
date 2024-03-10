@@ -53,7 +53,7 @@ public class MyTCPClient {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         MyTCPClient client= new MyTCPClient();
         //client.sendMessage(3579,"127.0.0.1");
-        client.sendFile(8002,"127.0.0.1","src/be/uantwerpen/fti/ei/SendFile" );
+        client.sendFile(8125,"127.0.0.1","src/be/uantwerpen/fti/ei/SendFile" );
         client.close();
     }
 }
